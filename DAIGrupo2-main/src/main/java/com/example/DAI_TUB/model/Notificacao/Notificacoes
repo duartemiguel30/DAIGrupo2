@@ -1,0 +1,67 @@
+package com.example.application.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Notificacao {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id_notificacao;
+    
+    @Column(nullable = false)
+    private Long id_utilizador;
+    
+    @Column(nullable = false)
+    private String mensagem;
+    
+    @Column(nullable = false)
+    private String data_envio;
+    
+    // Construtores, getters e setters
+    public Notificacao() {
+        // Construtor padrão necessário para JPA
+    }
+
+    public Notificacao(Long id_utilizador, String mensagem, String data_envio) {
+        this.id_utilizador = id_utilizador;
+        this.mensagem = mensagem;
+        this.data_envio = data_envio;
+    }
+
+    public Long getId_notificacao() {
+        return id_notificacao;
+    }
+
+    public void setId_notificacao(Long id_notificacao) {
+        this.id_notificacao = id_notificacao;
+    }
+
+    public Long getId_utilizador() {
+        return id_utilizador;
+    }
+
+    public void setId_utilizador(Long id_utilizador) {
+        this.id_utilizador = id_utilizador;
+    }
+
+    public String getMensagem() {
+        return mensagem;
+    }
+
+    public void setMensagem(String mensagem) {
+        this.mensagem = mensagem;
+    }
+
+    public String getData_envio() {
+        return data_envio;
+    }
+
+    public void setData_envio(String data_envio) {
+        this.data_envio = data_envio;
+    }
+}
