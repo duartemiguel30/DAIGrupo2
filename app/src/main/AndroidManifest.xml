@@ -46,6 +46,9 @@
         <!-- Atividade do menu principal (MenuPrincipalActivity) -->
         <activity android:name=".MenuPrincipalActivity" />
 
+        <!-- Atividade do perfil do usuário (PerfilActivity) -->
+        <activity android:name=".PerfilActivity" />
+
     </application>
 
 </manifest>

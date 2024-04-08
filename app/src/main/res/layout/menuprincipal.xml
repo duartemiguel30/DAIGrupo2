@@ -60,6 +60,14 @@
             android:background="@android:color/transparent" />
 
         <Button
+            android:id="@+id/purchasedTicketsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bilhetes Comprados"
+            android:textColor="#000000"
+            android:background="@android:color/transparent" />
+
+        <Button
             android:id="@+id/contactsButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

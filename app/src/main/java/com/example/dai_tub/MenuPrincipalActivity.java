@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.content.Intent;
 
 public class MenuPrincipalActivity extends AppCompatActivity {
 
@@ -19,7 +20,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
         drawerLayout = findViewById(R.id.drawerLayout);
 
-        TextView menuText = findViewById(R.id.menuText); // Corrigido para corresponder ao ID do TextView no XML
+        TextView menuText = findViewById(R.id.menuText);
         menuText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,6 +36,16 @@ public class MenuPrincipalActivity extends AppCompatActivity {
                 // Por exemplo, navegar para outra atividade
                 // Intent intent = new Intent(MenuPrincipalActivity.this, OutraAtividade.class);
                 // startActivity(intent);
+            }
+        });
+
+        Button profileButton = findViewById(R.id.profileButton);
+        profileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Abrir o layout do perfil
+                Intent intent = new Intent(MenuPrincipalActivity.this, PerfilActivity.class);
+                startActivity(intent);
             }
         });
 
